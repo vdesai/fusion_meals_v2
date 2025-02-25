@@ -17,7 +17,7 @@ export default function RecipePage() {
   const generateRecipe = async () => {
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/recipes/generate', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/recipes/generate`, {
         ingredients,
         cuisine1,
         cuisine2,
