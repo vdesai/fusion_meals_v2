@@ -13,6 +13,8 @@ export default function RecipePage() {
   const [dietaryPreference, setDietaryPreference] = useState('None');
   const [recipe, setRecipe] = useState('');
   const [loading, setLoading] = useState(false);
+  console.log('API URL:', process.env.NEXT_PUBLIC_API_URL);
+
 
   const generateRecipe = async () => {
     setLoading(true);

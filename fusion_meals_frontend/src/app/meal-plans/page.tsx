@@ -11,6 +11,8 @@ export default function MealPlanPage() {
   const [preferences, setPreferences] = useState('');
   const [mealPlan, setMealPlan] = useState('');
   const [loading, setLoading] = useState(false);
+  console.log('API URL:', process.env.NEXT_PUBLIC_API_URL);
+
 
   const generateMealPlan = async () => {
     setLoading(true);
