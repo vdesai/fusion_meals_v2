@@ -1,6 +1,10 @@
 import withPWA from 'next-pwa';
 import type { NextConfig } from 'next';
 
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+};
+
 const pwaConfig = withPWA({
   pwa: {
     dest: 'public',
@@ -10,10 +14,7 @@ const pwaConfig = withPWA({
   },
 });
 
-// ✅ Merge reactStrictMode outside of withPWA
-const nextConfig: NextConfig = {
-  reactStrictMode: true,
+export default {
+  ...nextConfig,
   ...pwaConfig,
 };
-
-export default nextConfig;

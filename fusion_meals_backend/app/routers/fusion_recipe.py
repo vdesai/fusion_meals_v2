@@ -11,7 +11,6 @@ load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("❌ OPENAI_API_KEY is not set in the .env file.")
-print(f"OpenAI API Key Loaded: {api_key}")
 
 # ✅ Initialize OpenAI client
 client = OpenAI(api_key=api_key)
